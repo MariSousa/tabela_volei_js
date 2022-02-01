@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação do Volei</title>
+
+    <style>
+        body{
+            background-color: brown;
+            color: white;
+            font: normal Arial;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <script>
+      var timeRussia = window.prompt('Digite um time da Russia') 
+      var timeItalia = window.prompt('Digite um time da Italia')
+      var timeTurquia = window.prompt('Digite um time da Turquia')
+
+      var pontoRussia = Number(window.prompt(`Digite o número de pontos do time ${timeRussia}`))
+      var pontoItalia = Number(window.prompt(`Digite o número de pontos do time ${timeItalia}`))
+      var pontoTurquia = Number(window.prompt(`Digite o número de pontos do time ${timeTurquia}`))
+
+      var pontoJogoRussia = Number(window.prompt(`Quantos pontos o ${timeRussia} ganhou no último jogo?`))
+      var pontoJogoItalia = Number(window.prompt(`Quantos pontos o ${timeItalia} ganhou no último jogo?`))
+      var pontoJogoTurquia = Number(window.prompt(`Quantos pontos o ${timeTurquia} ganhou no último jogo?`))
+
+      var ultimoJogoRussia = pontoRussia + pontoJogoRussia 
+      var ultimoJogoItalia = pontoItalia + pontoJogoItalia 
+      var ultimoJogoTurquia = pontoTurquia + pontoJogoTurquia
+
+      document.write('<h1>Tabela de classificação dos últimos jogos!</h1>')
+      document.write('<h2>Confira os pontos dos seus times favoritos</h2>')
+      document.write(`<h3>Rússia:</h3><br> ${timeRussia} tinha ${pontoRussia} pontos. Último jogo: ${pontoJogoRussia} pontos. Atualmente sua classificação é de: ${ultimoJogoRussia} pontos. <br><br>`)
+      document.write('<hr>')
+      document.write(`<h3>Itália:</h3><br> ${timeItalia} tinha ${pontoItalia} pontos. Último jogo: ${pontoJogoItalia} pontos. Atualmente sua classificação é de: ${ultimoJogoItalia} pontos. <br><br>`)
+      document.write('<hr>')
+      document.write(`<h3>Turquia:</h3><br> ${timeTurquia} tinha ${pontoTurquia} pontos. Último jogo: ${pontoJogoTurquia} pontos. Atualmente sua classificação é de: ${ultimoJogoTurquia} pontos.<br><br>`)
+      document.write('<hr>')
+      document.write(ultimoJogoTurquia > ultimoJogoItalia && ultimoJogoTurquia > ultimoJogoRussia ? "<h2>Turquia está em primeiro lugar</h2>" : "<h2>Turquia não está em primeiro lugar</h2>")
+    </script>
+</body>
+</html>
